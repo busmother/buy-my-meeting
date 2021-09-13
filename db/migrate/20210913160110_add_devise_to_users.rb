@@ -16,8 +16,8 @@ class AddDeviseToUsers < ActiveRecord::Migration[6.1]
 
       ## Custom attributes
 
-      t.string :name,
-      t.string :rate
+      t.string :name, null: false, default: "New User"
+      t.float :rate, null: false, default: 15
 
       ## Trackable
       # t.integer  :sign_in_count, default: 0, null: false
