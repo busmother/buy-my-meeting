@@ -3,7 +3,6 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-    has_many :meetings
-    has_one :rate
+    has_many :meetings, through: :invitations
     validates :name, length: {minimum: 2}
 end
