@@ -2,7 +2,7 @@ class Api::VI::UsersController < Api::V1::ApplicationController
 
     def index
         users = User.all
-        render json: UserSerializer.new(users)
+        render json: UserSerializer.new(user)
     end
 
     def create
