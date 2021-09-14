@@ -1,8 +1,8 @@
-class Api::VI::MeetingssController < Api::V1::ApplicationController
+class Api::VI::MeetingsController < Api::V1::ApplicationController
 
     def index
         users = Meeting.all
-        render json: meetingSerializer.new(meeting)
+        render json: MeetingSerializer.new(meeting)
     end
 
     def create
