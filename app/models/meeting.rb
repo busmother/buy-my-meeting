@@ -1,6 +1,5 @@
 class Meeting < ApplicationRecord
-    has_many :users
-    has_many :rates, through: :users
+    has_many :users, through: :users
     validates :title, length: {minimum: 5}
 
 end
