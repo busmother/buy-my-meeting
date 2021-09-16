@@ -1,6 +1,6 @@
 class Meeting < ApplicationRecord
     has_many :users, through: :invitations
-    validates :title, length: {minimum: 5}
+    validates :title, length: {minimum: 1}
 
     def total_cost
         attendees = self.users
@@ -9,11 +9,12 @@ class Meeting < ApplicationRecord
     end
 
     def current_cost
+        attendees = []
         invitations = self.invitations
         invitations.each do |i|
-            i.attenance ? i.user.rate*self.minutes_duration : 0
+            i.attendance ? attendees.push(i.user.rate*self.minutes_duration) : 
         end
-        invitations.sum
+        attendees.sum
     end
 
 end
