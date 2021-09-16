@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-users = User.create([
-    {email: 'user1@gmail.com', encrypted_password: 'password', name: 'user1', rate: 30},
-    {email: 'user2@gmail.com', encrypted_password: 'password', name: 'user2', rate: 18.5}, 
-    {email: 'user3@gmail.com', encrypted_password: 'password', name: 'user3', rate: 15},
-    {email: 'user4@gmail.com', encrypted_password: 'password', name: 'user4', rate: 15.5}
+users = User.create!([
+    {email: 'user1@gmail.com', password: 'password', name: 'user1', rate: 30},
+    {email: 'user2@gmail.com', password: 'password', name: 'user2', rate: 18.5}, 
+    {email: 'user3@gmail.com', password: 'password', name: 'user3', rate: 15},
+    {email: 'user4@gmail.com', password: 'password', name: 'user4', rate: 15.5}
 ])
 
 meetings = Meeting.create([
