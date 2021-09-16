@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_09_14_171020) do
 
   create_table "invitations", force: :cascade do |t|
-    t.float "cost"
+    t.float "cost" #remove
     t.boolean "attendance"
     t.integer "user_id"
     t.integer "meeting_id", null: false
