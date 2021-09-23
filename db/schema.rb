@@ -13,8 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_09_14_171020) do
 
   create_table "invitations", force: :cascade do |t|
-    t.float "cost" #remove
-    t.boolean "attendance"
+    t.boolean "attendance", default: true
     t.integer "user_id"
     t.integer "meeting_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -26,8 +25,7 @@ ActiveRecord::Schema.define(version: 2021_09_14_171020) do
   create_table "meetings", force: :cascade do |t|
     t.string "title", default: "New Meeting"
     t.integer "minutes_duration", default: 30
-    t.datetime "start_time", default: "2021-09-14 17:14:40", null: false
-    t.float "cost", default: 0.0
+    t.datetime "start_time", default: "2021-09-16 22:33:34", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
