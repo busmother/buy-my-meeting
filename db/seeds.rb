@@ -37,8 +37,8 @@ invitations = Invitation.create([
     {user_id: 3, meeting_id: 2},
     {user_id: 3, meeting_id: 4},
     {user_id: 3, meeting_id: 5},
-    {user_id: 3, meeting_id: 6},
+    {user_id: 3, meeting_id: 6, attendance: false},
     {user_id: 4, meeting_id: 2},
     {user_id: 4, meeting_id: 4},
-    {user_id: 4, meeting_id: 6}
+    {user_id: 4, meeting_id: 6, attendance: false}
 ])

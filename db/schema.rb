@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 2021_09_14_171020) do
 
   create_table "meetings", force: :cascade do |t|
     t.string "title", default: "New Meeting"
-    t.integer "minutes_duration", default: 30
-    t.datetime "start_time", default: "2021-09-16 22:33:34", null: false
+    t.float "minutes_duration", default: 30.0
+    t.datetime "start_time", default: "2021-09-23 17:53:31", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
