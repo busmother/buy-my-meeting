@@ -11,14 +11,18 @@ class Meeting < ApplicationRecord
         return attendees
     end
 
-    def total_cost #working
-        attendees_rate = self.users.map { |a| a.rate }
+    def cost(attendees)
+        attendees_rate = attendees.map { |a| a.rate }
         total_rate = attendees_rate.sum 
         total_rate*(self.minutes_duration/60)
     end
 
-    def current_cost
+    def total_cost
+        self.cost(self.users)
+    end
 
+    def current_cost
+        self.cost(self.attendees)
     end
 
 end
